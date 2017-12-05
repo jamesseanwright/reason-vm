@@ -1,0 +1,23 @@
+{
+  "name": "reason-vm",
+  "version": "0.0.1",
+  "description": "A 16-bit virtual machine written in ReasonML",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "8-bit",
+    "vm",
+    "virtual",
+    "machine",
+    "reason",
+    "reasonml",
+    "assembly"
+  ],
+  "author": "James Wright <james@jamesswright.co.uk>",
+  "license": "ISC",
+  "devDependencies": {
+    "reason-cli": "https://github.com/reasonml/reason-cli/archive/3.0.1-bin-linux.tar.gz"
+  }
+}
