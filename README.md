@@ -11,6 +11,8 @@ A 16-bit virtual machine written in ReasonML.
 * `a7` - stack register
 * `st` - status register
 
+TODO: higher and lower
+
 
 ## Instruction Set
 
