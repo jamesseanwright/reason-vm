@@ -8,5 +8,6 @@
     "package-specs": {
         "module": "commonjs"
     },
-    "suffix": ".bs.js"
+    "suffix": ".bs.js",
+    "refmt": 3
 }
