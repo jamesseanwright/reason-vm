@@ -1,3 +1,1 @@
-module Assembler = {
-    let assemble = (asmPath: string): string => "";
-};
+let assemble = (asmPath: string): string => "foo";

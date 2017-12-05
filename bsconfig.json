@@ -5,6 +5,7 @@
         { "dir": "src", "subdirs": true },
         { "dir": "test", "type": "dev", "subdirs": true },
     ],
+    "bs-dev-dependencies": ["bs-jest"],
     "package-specs": {
         "module": "commonjs"
     },
