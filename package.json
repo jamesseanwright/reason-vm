@@ -9,7 +9,8 @@
   },
   "scripts": {
     "build": "./node_modules/.bin/bsb -make-world",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm run build",
+    "test": "jest"
   },
   "keywords": [
     "16-bit",
@@ -24,7 +25,8 @@
   "license": "ISC",
   "devDependencies": {
     "bs-jest": "0.2.0",
-    "bs-platform": "2.1.0"
+    "bs-platform": "2.1.0",
+    "jest": "^21.2.1"
   },
   "dependencies": {
     "reason": "3.0.2"
