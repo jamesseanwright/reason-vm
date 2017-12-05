@@ -22,6 +22,10 @@
   "author": "James Wright <james@jamesswright.co.uk>",
   "license": "ISC",
   "devDependencies": {
-    "reason-cli": "https://github.com/reasonml/reason-cli/archive/3.0.1-bin-linux.tar.gz"
+    "bs-jest": "0.2.0",
+    "bs-platform": "2.1.0"
+  },
+  "dependencies": {
+    "reason": "3.0.2"
   }
 }

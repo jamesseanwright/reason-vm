@@ -1,0 +1,12 @@
+{
+    "name": "reason-vm",
+    "namespace": true,
+    "sources": [
+        { "dir": "src", "subdirs": true },
+        { "dir": "test", "type": "dev", "subdirs": true },
+    ],
+    "package-specs": {
+        "module": "commonjs"
+    },
+    "suffix": ".bs.js"
+}
