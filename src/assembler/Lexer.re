@@ -1,6 +1,5 @@
 type tokenType =
   | Instruction
-  | OperandLength
   | Comma
   | DataRegister
   | ImmediateValue
@@ -12,6 +11,7 @@ type token = {
     tokenType: tokenType
 };
 
-let lex = (asm: string): list(token) => [
-    { tokenType: Label }
-];
+let lex = (asm: string) => {
+    let lines = Array.to_list(asm |> Js.String.split("\n"));
+    Js.log(lines);
+};
