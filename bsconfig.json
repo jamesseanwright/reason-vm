@@ -3,9 +3,9 @@
     "namespace": true,
     "sources": [
         { "dir": "src", "subdirs": true },
-        { "dir": "test", "type": "dev", "subdirs": true },
+        { "dir": "test", "subdirs": true },
     ],
-    "bs-dev-dependencies": ["bs-jest"],
+    "bs-dependencies": ["bs-jest"],
     "package-specs": {
         "module": "commonjs"
     },
