@@ -1,6 +1,6 @@
 open Jest;
 
-describe("the Instructions modue", () => {
+describe("the Instructions module", () => {
     open Expect;
 
     describe("isValid()", () => {
