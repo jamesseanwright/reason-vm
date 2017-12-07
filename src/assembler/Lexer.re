@@ -14,10 +14,10 @@ type token = {
 
 let toTokens = (line: string) => {
     let rawTokens = line
-        |> Js.String.replaceByRe([%bs.re "/\\;.*$/g"], "") /* remove comments */
+        |> Js.String.replaceByRe([%bs.re "/\\;.*$/g"], "") /* removes comments */
         |> Js.String.splitByRe([%bs.re "/[\\s,]/g"]) /* TODO: move to delimiters const? */
         |> Array.to_list
-        |> Js.log;
+        |> List.filter(r => String.length(r) > 0); /* TODO: extract into wider-capturing isEmpty util */
 };
 
 let lex = (asm: string) => { /* TODO - return type */
