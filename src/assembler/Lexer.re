@@ -6,13 +6,7 @@ type tokenType =
   | Label(string)
   | Unrecognised;
 
-type token = {
-    .
-    tokenType: tokenType,
-    value: string
-};
-
-let isImmediateValue = (rawToken: string) => false;
+let isImmediateValue = (rawToken: string) => String.get(rawToken, 0) === '#'; /* TODO: symbolic constants */
 
 let getToken = (rawToken: string) => {
     if (Instructions.isValid(rawToken)) {
@@ -37,7 +31,10 @@ let toTokens = (line: string) => {
         |> List.map(getToken);
 };
 
-let lex = (asm: string) => { /* TODO - return type */
+let lex = (asm: string): list(tokenType) => {
     let lines = Array.to_list(asm |> Js.String.split("\n"));
-    List.map(toTokens, lines);
+
+    lines
+        |> List.map(toTokens)
+        |> List.flatten;
 };
