@@ -1,3 +1,5 @@
+/* TODO: pattern matching for instructions? */
+
 let instructions = [
     ("move", 0b00000000)
 ];
