@@ -23,7 +23,7 @@ let getToken = (rawToken: string) => {
 };
 
 let toTokens = (line: string) => {
-    line
+    line /* TODO: use OCaml backend for Regex? */
         |> Js.String.replaceByRe([%bs.re "/\\;.*$/g"], "") /* removes comments */
         |> Js.String.splitByRe([%bs.re "/[\\s,]/g"]) /* TODO: move to delimiters const? */
         |> Array.to_list
