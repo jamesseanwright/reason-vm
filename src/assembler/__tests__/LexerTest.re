@@ -1,10 +1,10 @@
-open Jest;
+/* open Jest;
 
 JestJs.enableAutomock();
 
 module type MockInstructions = {
-    open MockJs
-    isValid: string => bool:
+    open MockJs;
+    isValid: string => bool;
 };
 
 describe("The Lexer module", () => {
@@ -15,4 +15,4 @@ describe("The Lexer module", () => {
 
         /* Instructions.isValid |> MockJs.mockImplementationOnce((r: string) => true); */
     });
-});
+}); */
