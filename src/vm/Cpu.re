@@ -1,10 +1,14 @@
 open Register;
 
+exception Overflow(string);
+
 type registersGroup = {
     instruction: register,
     arithmetic: register,
     accumulator: register,
     status: register,
+    programCounter: register,
+    stackPointer: register,
     b: register,
     c: register,
     d: register,
@@ -15,52 +19,83 @@ type registersGroup = {
 
 let registers = {
     instruction: {
-        maxSize: 255,
+        name: "instruction",
+        size: 255,
         value: 0,
     },
 
     arithmetic: {
-        maxSize: 255,
+        name: "arithmetic",
+        size: 255,
         value: 0,
     },
 
     accumulator: {
-        maxSize: 255,
+        name: "accumulator",
+        size: 255,
         value: 0,
     },
 
     status: {
-        maxSize: 31,
+        name: "status",
+        size: 31,
         value: 0,
     },
 
     b: {
-        maxSize: 255,
+        name: "b",
+        size: 255,
         value: 0,
     },
 
     c: {
-        maxSize: 255,
+        name: "c",
+        size: 255,
         value: 0,
     },
 
     d: {
-        maxSize: 255,
+        name: "d",
+        size: 255,
         value: 0,
     },
 
     e: {
-        maxSize: 255,
+        name: "e",
+        size: 255,
         value: 0,
     },
 
     h: {
-        maxSize: 255,
+        name: "h",
+        size: 255,
         value: 0,
     },
 
     l: {
-        maxSize: 255,
+        name: "l",
+        size: 255,
         value: 0,
     },
+
+    programCounter: {
+        name: "programCounter",
+        size: 65535,
+        value: 0,
+    },
+
+    stackPointer: {
+        name: "stackPointer",
+        size: 65535,
+        value: 0,
+    },
+};
+
+/* TODO: should register be an object
+ * that encapsulates this behaviour? */
+let setRegister = (register: register, value: int) => {
+    switch (value > register.size) {
+    | true => raise(Overflow("Overflow for register " ++ register.name))
+    | _ => 0 /* TODO: update record */
+    }
 };
