@@ -20,7 +20,7 @@ type registersGroup = {
 let registers = {
     instruction: {
         name: "instruction",
-        size: 255, /* TODO: signing! */
+        size: 255,
         value: 0,
     },
 
@@ -90,6 +90,11 @@ let registers = {
         value: 0,
     },
 };
+
+type statusRegisterValue =
+  | Signed;
+
+let statusFlagBitMasks = (status: int) => Signed; /* TODO: implement bitmask */
 
 /* TODO: should register be an object
  * that encapsulates this behaviour? */
