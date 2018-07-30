@@ -20,7 +20,7 @@ type registersGroup = {
 let registers = {
     instruction: {
         name: "instruction",
-        size: 255,
+        size: 255, /* TODO: signing! */
         value: 0,
     },
 
