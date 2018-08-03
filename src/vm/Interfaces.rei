@@ -2,7 +2,7 @@ module type Cpu = {
     /* TODO: define */
 };
 
-module type InputRegister = {
+module type RegisterSpecification = {
     let name: string;
     let size: int;
 };

@@ -1,4 +1,4 @@
-module Cpu: Interfaces.Cpu = {
+/* module Cpu: Interfaces.Cpu = {
     type registersGroup = {
         instruction: Register.register,
         arithmetic: Register.register,
@@ -87,4 +87,4 @@ module Cpu: Interfaces.Cpu = {
             value: 0,
         },
     };
-};
+}; */
