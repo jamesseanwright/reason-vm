@@ -1,6 +1,4 @@
-exception Overflow(string);
-
-module Cpu = {
+module Cpu: Interfaces.Cpu = {
     type registersGroup = {
         instruction: Register.register,
         arithmetic: Register.register,
@@ -88,19 +86,5 @@ module Cpu = {
             size: 65535,
             value: 0,
         },
-    };
-
-    type statusRegisterValue =
-      | Signed;
-
-    let statusFlagBitMasks = (status: int) => Signed; /* TODO: implement bitmask */
-
-    /* TODO: should register be an object
-    * that encapsulates this behaviour? */
-    let setRegister = (register: Register.register, value: int) => {
-        switch (value > register.size) {
-        | true => {}
-        | _ => {}
-        }
     };
 };
